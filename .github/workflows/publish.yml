@@ -20,7 +20,6 @@ jobs:
           yarn install --frozen-lockfile
           yarn build
           export WWW_COMMIT=`git rev-parse HEAD`
-
       - name: Publish PR change to www branch
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
