@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'onprem.in',
   tagline: 'DIY OnPrem Cloud',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/onprem.png',
 
   // Set the production url of your site here
   url: 'https://onprem.in',
@@ -62,7 +62,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/onprem.png',
       navbar: {
         title: 'onprem.in',
         logo: {
