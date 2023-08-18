@@ -1,0 +1,32 @@
+name: Publish Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+      - run: |
+          yarn install --frozen-lockfile
+          yarn build
+          export WWW_COMMIT=`git rev-parse HEAD`
+
+      - name: Publish PR change to www branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: www
+          publish_dir: ./build
+          destination_dir: ./
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Published onprem.in website using branch@commit ${{ github.event.inputs.branch }}@${{ env.WWW_COMMIT }}'
+          #force_orphan: true
