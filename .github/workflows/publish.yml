@@ -28,3 +28,4 @@ jobs:
           publish_dir: ./build
           destination_dir: ./
           force_orphan: true
+          cname: onprem.in
