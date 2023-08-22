@@ -1,0 +1,44 @@
+---
+sidebar_position: 1
+slug: '/'
+---
+
+# Getting started
+
+<img src="/img/onprem.png" />
+
+## About
+
+What it this? Why should you care?
+
+## Installation
+
+```
+/bin/bash -c "$(curl -fsSL https://onprem.in/stall.sh)"
+```
+
+## Prerequisites
+
+Example code:
+
+```apex title="Why we need it?"
+Some apt-get get stuff here?
+```
+
+:::info
+
+`Some` **critical** info here?
+
+:::
+
+# Title 1
+
+Lorem ipsum
+
+## Title 2
+
+Lorem ipsum
+
+### Title 3
+
+Lorem ipsum

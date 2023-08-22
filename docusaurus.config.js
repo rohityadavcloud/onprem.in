@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'onprem.in',
-  tagline: 'DIY OnPrem Cloud',
+  tagline: 'DIY OnPrem CloudStack Cloud',
   favicon: 'img/onprem.png',
 
   // Set the production url of your site here
@@ -45,6 +45,14 @@ const config = {
           editUrl:
             'https://github.com/rohityadavcloud/onprem.in/tree/main/',
         },
+        blog: {
+          showReadingTime: true,
+          routeBasePath: '/changelog',
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/rohityadavcloud/onprem.in/tree/main/',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -70,7 +78,7 @@ const config = {
             position: 'left',
             label: 'Guide',
           },
-          {to: '/blog', label: 'Changelog', position: 'left'},
+          {to: '/changelog', label: 'Changelog', position: 'left'},
           {
             href: 'https://github.com/apache/cloudstack',
             position: 'right',
