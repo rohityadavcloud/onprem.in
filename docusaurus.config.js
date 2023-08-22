@@ -39,13 +39,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/rohityadavcloud/onprem.in/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -74,60 +68,46 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Guide',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Changelog', position: 'left'},
+          {
+            href: 'https://github.com/apache/cloudstack',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
           {
             href: 'https://github.com/rohityadavcloud/onprem.in',
             label: 'GitHub',
             position: 'right',
           },
+          {type: 'search', position: 'right'},
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/rohityadavcloud/onprem.in',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        style: 'light',
+        copyright: `
+          <div style="opacity: 0.5">
+          <a href="mailto:users-subscribe@cloudstack.apache.org" target="_blank">
+            <img src="/img/social/mail.svg" title="Join CloudStack Users Mailing List" height="32px" />
+          </a>
+          <a href="https://www.reddit.com/r/ApacheCloudStack/" target="_blank">
+            <img src="/img/social/reddit.svg" title="CloudStack Reddit" height="32px" />
+          </a>
+          <a href="https://github.com/apache/cloudstack" target="_blank">
+            <img src="/img/social/github.svg" title="CloudStack Github" height="32px" />
+          </a>
+          <a href="https://twitter.com/CloudStack" target="_blank">
+            <img src="/img/social/twitter.svg" title="CloudStack Twitter" height="32px" />
+          </a>
+          <a href="https://www.youtube.com/@ApacheCloudStack" target="_blank">
+            <img src="/img/social/youtube.svg" title="CloudStack YouTube" height="32px" />
+          </a>
+          </div>
+          <div style="text-align: left;">
+          <div style="border-top: 1px solid #ccc;min-height: 60px;line-height: 20px;text-align: center;font-family: Avenir-Medium,serif;font-size: 14px;color: #999;display: flex;align-items: center;">
+          <span>Copyright © ${new Date().getFullYear()} OnPrem.in by <a href="https://rohityadav.cloud/" target="_blank">Rohit Yadav</a>.<br/>"Apache", "CloudStack", "Apache CloudStack", the Apache CloudStack logo, the Apache CloudStack Cloud Monkey logo and the Apache feather logos are registered trademarks or trademarks of The Apache Software Foundation. OnPrem icon is by <a href="https://www.flaticon.com/free-icons/roof">Freepik - Flaticon</a>.</span>`,
       },
       prism: {
         theme: lightCodeTheme,
