@@ -36,12 +36,6 @@ const config = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      {
-        gtag: {
-          trackingID: 'G-C6LSEE58JB',
-          anonymizeIP: true,
-        },
-      },
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
@@ -61,6 +55,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-C6LSEE58JB',
+          anonymizeIP: true,
         },
       }),
     ],
