@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkonprem=self.webpackChunkonprem||[]).push([[597],{7456:e=>{e.exports=JSON.parse('{"label":"facebook","permalink":"/changelog/tags/facebook","allTagsPath":"/changelog/tags","count":1}')}}]);
